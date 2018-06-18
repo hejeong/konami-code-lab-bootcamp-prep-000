@@ -13,7 +13,16 @@ const codes = [
 
 let index = 0;
 
-function init() {
+function init(event) {
   // your code here
+  const key = event.key;
 
+  if(key === codes[index]){
+    index++;
+    if(index === 10){
+      alert("Congratulations!")
+    }
+  }else{
+    index = 0;
+  }
 }
